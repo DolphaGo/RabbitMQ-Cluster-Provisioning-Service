@@ -1,0 +1,68 @@
+plugins {
+    id 'org.springframework.boot' version '2.3.1.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+    id 'java'
+}
+
+group = 'com.navercorp'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    //springboot
+    implementation('org.springframework.boot:spring-boot-starter-web')
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
+
+    //batch
+    compile('org.springframework.boot:spring-boot-starter-batch')
+    testCompile('org.springframework.batch:spring-batch-test')
+
+    // Lombok
+    compile('org.projectlombok:lombok:1.18.12')
+    annotationProcessor('org.projectlombok:lombok')
+    testAnnotationProcessor('org.projectlombok:lombok')
+
+    //rabbitmq
+    implementation 'org.springframework.boot:spring-boot-starter-amqp'
+    testImplementation 'org.springframework.amqp:spring-rabbit-test'
+
+    //jpa
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'com.fasterxml.jackson.core:jackson-databind'
+
+    //http
+    compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5'
+    compile group: 'commons-codec', name: 'commons-codec', version: '1.5'
+    compile group: 'com.squareup.okhttp3', name: 'okhttp', version: '3.2.0'
+
+    //database
+    compile 'mysql:mysql-connector-java'
+    runtimeOnly 'com.h2database:h2'
+
+    //swagger
+    compile 'io.springfox:springfox-swagger2:2.6.1'
+    compile 'io.springfox:springfox-swagger-ui:2.6.1'
+
+    //json
+    compile group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1'
+
+    //telnet
+    compile group: 'commons-net', name: 'commons-net', version: '3.6'
+    compile group: 'com.jcraft', name: 'jsch', version: '0.1.54'
+
+    //privateKey 읽기
+    compile group: 'commons-io', name: 'commons-io', version: '2.6'
+
+}
+
+test {
+    useJUnitPlatform()
+}
