@@ -1,8 +1,8 @@
 ## API 명세서
 
-#### Manager Server : http://49.50.163.24:8081
-
-#### Swagger :  http://49.50.163.24:8081/swagger-ui.html
+서비스가 종료되었습니다.
+~~Manager Server : http://49.50.163.24:8081~~
+~~Swagger :  http://49.50.163.24:8081/swagger-ui.html~~
 
 
 
