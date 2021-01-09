@@ -2,7 +2,7 @@
 
 
 
-* #### [API 명세서](/reference/API명세서.md)
+* #### [API Docs](/reference/API명세서.md)
 
 * #### [Infra structure](/reference/Infra.md)
 
